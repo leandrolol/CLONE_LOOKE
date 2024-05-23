@@ -1,0 +1,106 @@
+.section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 60px; // Altura do header
+
+    &__background-section {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        overflow: hidden;
+
+        video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 15%;
+            pointer-events: none;
+        }
+
+        &::before {
+            left: 0;
+            background: linear-gradient(to right, rgba(3, 9, 19, 1), rgba(3, 9, 19, 0));
+        }
+
+        &::after {
+            right: 0;
+            background: linear-gradient(to left, rgba(3, 9, 19, 1), rgba(3, 9, 19, 0));
+        }
+    }
+
+    &__box {
+        margin-top: 30px;
+        width: 40%;
+        height: auto; // Mudado de 100% para 'auto'
+        position: relative;
+        background-color: #152535;
+        background: linear-gradient(to right, rgba(3, 9, 19, 0.9) 40%, rgba(3, 9, 19, 0) 100%);
+        display: flex;
+        flex-direction: column; // Adicionado para garantir que o conteúdo se ajuste corretamente
+        align-items: center;
+        justify-content: center;
+        padding: 3%;
+        color: #fff;
+
+        &-conteudo {
+            width: 100%;
+            max-width: 800px; // Adicionado para limitar a largura do conteúdo
+            p {
+                color: #fff;
+            }
+
+            &--links {
+                display: flex;
+                padding-top: 25px;
+                padding-bottom: 25px;
+
+                img {
+                    width: 64px;
+                    height: 100%;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+
+            &-age {
+                display: flex;
+                align-items: center;
+
+                p {
+                    padding-left: 5px;
+                }
+            }
+
+            &-bottom {
+                width: 100%;
+                background: linear-gradient(to left, rgba(5, 21, 37, 0), #152535, rgba(5, 21, 37, 0));
+                text-align: center;
+                padding: 20px 0 15px 0;
+
+                button {
+                    background-color: rgb(209, 178, 14);
+                    padding: 5px 8px 6px 8px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    min-width: 178px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 22px;
+                    border-style: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
