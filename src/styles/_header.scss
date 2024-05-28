@@ -64,3 +64,26 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .header__container{
+        &-img {
+            p {
+                display: none;
+            }
+        }
+
+        &__links {
+            &--item {
+                &-first {
+                    font-weight: bold;
+                    background-color: #fee100;
+                    color: #002bb5;
+                    padding: 2px 20px 3px 20px;
+                    border-radius: 20px;
+                    font-size: 18px;
+                }
+        }
+    }
+}
+}
