@@ -40,23 +40,30 @@
     }
 
     &__box {
-
-        width: 40%;
-        height: auto; // Mudado de 100% para 'auto'
+        width: 90%; 
+        height: auto; 
         position: relative;
         background-color: #152535;
         background: linear-gradient(to right, rgba(3, 9, 19, 0.9) 40%, rgba(3, 9, 19, 0) 100%);
         display: flex;
-        flex-direction: column; // Adicionado para garantir que o conteúdo se ajuste corretamente
+        flex-direction: column; 
         align-items: center;
         justify-content: center;
-        padding: 3%;
+        padding: 10px;
         color: #fff;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
+
+        @media (min-width: 768px) {
+            width: 60%; 
+            padding: 8%;
+            padding-bottom: 100px;
+        }
+
+
         
         &-conteudo {
             width: 100%;
-            max-width: 800px; // Adicionado para limitar a largura do conteúdo
+            max-width: 800px;
             p {
                 color: #fff;
             }
